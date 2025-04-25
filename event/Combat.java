@@ -79,17 +79,8 @@ public class Combat {
 
     private void enemyTurn() {
         System.out.println(enemy.getName() + "'s turn!");
-
-        // Optional: Add random chance to use ability
-        if (Math.random() < 0.3) {
-            enemy.useAbility(player);
-        } else {
-            int dmg = enemy.attack(player);
-            System.out.println(enemy.getName() + " hits you for " + dmg + " damage!");
-        }
-
-        // Reset defend status after enemy turn
-        player.setDefending(false);
+        enemy.takeTurn(player);
+        player.setDefending(false);//Change to reset all status effect but i dont have status effects rn so this is fine
     }
 
 }

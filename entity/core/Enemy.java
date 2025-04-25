@@ -23,12 +23,20 @@ public abstract class Enemy {
     public int getDefense() { return defense; }
     public int getExpDrop() { return expDrop; }
 
-    public abstract void useAbility(Player player);
+    public abstract void takeTurn(Player player);
 
+    //basic attack
     public int attack(Player player) {
         int damage = Math.max(0, attack - player.getDefense());
         player.takeDamage(damage);
         return damage;
+    }
+
+    // Overloaded attack method with custom damage
+    public int attack(Player player, int damage) {
+        int finalDamage = Math.max(0, damage - player.getDefense());
+        player.takeDamage(finalDamage);
+        return finalDamage;
     }
 
     public void takeDamage(int dmg) {
