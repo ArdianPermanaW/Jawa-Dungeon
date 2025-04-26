@@ -6,7 +6,7 @@ public class Slime extends Enemy {
     static Random random = new Random();
     int panicHealUse = 1;
     public Slime() {
-        super("Slime", 30, 5, 1, 10);
+        super("Slime", 30, 10, 1, 10);
     }
 
     @Override
