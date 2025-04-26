@@ -8,6 +8,9 @@ public class Player {
     private int level;
     private int exp;
     private boolean isDefending;
+    private int inventorySpace;
+
+    private Inventory inventory;
 
     public Player() {
         this.level = 1;
@@ -16,6 +19,9 @@ public class Player {
         this.hp = maxHp;
         this.attack = 15;
         this.defense = 5;
+        this.inventorySpace = 10;
+
+        this.inventory = new Inventory(this.inventorySpace);
     }
 
     // --- Getters & Setters ---
@@ -45,8 +51,6 @@ public class Player {
         hp = Math.min(maxHp, hp + amount);
         System.out.println("Player heals " + amount + " HP! (HP: " + hp + ")");
     }
-
-
 
     public boolean isAlive() {
         return hp > 0;

@@ -1,7 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
 
-import entity.EnemyFactory;
 import entity.core.*;
 import event.*;
 

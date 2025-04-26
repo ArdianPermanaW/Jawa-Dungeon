@@ -30,7 +30,7 @@ public class Combat {
                     break;
                 case "3":
                     flee();
-                    return false;
+                    return true;
                 default:
                     System.out.println("Invalid move. Try again.");
             }

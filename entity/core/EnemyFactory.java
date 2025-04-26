@@ -1,7 +1,6 @@
-package entity;
+package entity.core;
 
-import entity.core.*;
-import entity.types.*;
+import entity.enemy.*;
 
 public class EnemyFactory {
     public static Enemy create(String type) {
